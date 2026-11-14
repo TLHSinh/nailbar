@@ -26,7 +26,7 @@ export function LegacyGame() {
 
   useEffect(() => {
     if (!joined || !mount.current) return;
-    const connection: SalonSocket = io(import.meta.env.VITE_SERVER_URL ?? "http://localhost:3001");
+    const connection: SalonSocket = io({ path: "/api/socket.io", transports: ["websocket"] });
     socket.current = connection;
     const salon = new SalonWorld3D(mount.current, (x, y) => connection.emit("player:move", { x, y }), () => connection.emit("player:reception"));
     scene.current = salon;
