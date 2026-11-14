@@ -1,0 +1,9 @@
+# Lộ trình lập trình
+
+1. **Cảnh tiệm:** Bản chơi offline ở `/` dùng cảnh V2, nội thất V3 (bốn trạm mỗi loại), nhân vật V4, camera theo sau, điều khiển bàn phím/chạm sàn và va chạm gần đúng. Nội thất game gộp mesh theo vật liệu và instancing; bóng đổ thời gian thực đã tắt. Nhân vật có chu kỳ đi bằng khớp tay/chân và tư thế ngồi đơn giản. Độ phân giải render tự điều chỉnh. Phòng online cũ ở `/?view=legacy-online`; cảnh xem nội thất gốc ở `/?view=salon-v2`. Cần tiếp tục thử trên điện thoại thật, cải thiện mesh/texture nhân vật, rig xương và hoạt ảnh ngồi/làm móng, navmesh/va chạm sát hình học. Xem [`PERFORMANCE_AUDIT_MVP.md`](PERFORMANCE_AUDIT_MVP.md), [`SALON_V2_MODEL.md`](SALON_V2_MODEL.md), [`AVATARS_V4.md`](AVATARS_V4.md) và [`3D_RESEARCH.md`](3D_RESEARCH.md).
+2. **Trải nghiệm nail:** Đã có chọn mẫu ngoại hình và nhập tên khách, bảng tên trên đầu nhân vật, lễ tân nữ Hue Trinh, thợ nam Quang Tran, catalog bốn dịch vụ, xếp bàn/ghế theo loại, tự đi và ngồi, bảng thiết kế năm móng với dáng/màu/họa tiết, xem kết quả rồi đứng dậy chơi tiếp. Camera theo sau đã lùi ra và tại bàn nhìn được cả khách lẫn thợ. Đây là luồng offline một người. Tiếp theo: cải thiện cận cảnh bàn tay/chân bằng 3D, thao tác làm nail sâu hơn, âm thanh và lưu mẫu thiết kế; thời gian dịch vụ vẫn chỉ là nhãn dự kiến.
+3. **Nhiều người:** phiên khách bền qua reconnect, phòng mời bạn, trạng thái ghế có timeout, trạng thái hành động, chỉ gửi thay đổi thay vì toàn bộ phòng.
+4. **Kinh doanh:** PostgreSQL, admin xác thực, nhập mẫu làm được tại tiệm, lịch nhân viên, đặt lịch chống trùng, mã mẫu.
+5. **Cộng đồng:** biểu cảm, bình chọn, ảnh nhóm; chat tự do chỉ khi có công cụ kiểm duyệt.
+
+Trước khi mở website công khai, cần giới hạn tốc độ di chuyển/thông điệp trên máy chủ, xác thực phiên, kiểm tra Origin, HTTPS, sao lưu dữ liệu và kiểm thử trên điện thoại thật. Các giới hạn này chưa hoàn chỉnh trong bản khung thử nghiệm.

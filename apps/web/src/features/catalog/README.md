@@ -1,0 +1,1 @@
+Đã có bảng React chọn ba dịch vụ mẫu tại quầy tiếp tân. Dữ liệu mẫu dùng chung nằm ở `packages/shared/src/catalog.ts`. Catalog thật, bộ lọc và API client sẽ được bổ sung khi có dữ liệu của tiệm; chỉ hiển thị mẫu được tiệm duyệt và ghi rõ khả năng thực hiện tại tiệm.

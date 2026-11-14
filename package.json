@@ -1,0 +1,14 @@
+{
+  "name": "nail-online",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "dev": "concurrently -k -n server,web \"npm run dev -w @nail-online/server\" \"npm run dev -w @nail-online/web\"",
+    "build": "npm run build -w @nail-online/web && npm run check -w @nail-online/server",
+    "check": "npm run check -w @nail-online/shared && npm run check -w @nail-online/server && npm run check -w @nail-online/web",
+    "test": "npm run test -w @nail-online/server && npm run test -w @nail-online/web"
+  },
+  "devDependencies": { "concurrently": "^9.2.1", "typescript": "^5.8.3" }
+}

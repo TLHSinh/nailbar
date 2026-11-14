@@ -1,0 +1,63 @@
+{
+  "version": 4,
+  "forward": "glTF +Z",
+  "animated": false,
+  "avatars": [
+    {
+      "id": "staff_male",
+      "label": "Nhân viên nam",
+      "role": "staff",
+      "appearance": "Tóc rẽ ngôi, tạp dề nâu taupe, tay cầm cọ làm móng",
+      "url": "/models/avatars/staff_male.glb"
+    },
+    {
+      "id": "staff_female_01",
+      "label": "Nhân viên nữ 1",
+      "role": "staff",
+      "appearance": "Tóc búi gọn, da nâu ấm, tạp dề hồng đất",
+      "url": "/models/avatars/staff_female_01.glb"
+    },
+    {
+      "id": "staff_female_02",
+      "label": "Nhân viên nữ 2",
+      "role": "staff",
+      "appearance": "Tóc bob gợn nhẹ, tạp dề hồng đào, tay chống hông",
+      "url": "/models/avatars/staff_female_02.glb"
+    },
+    {
+      "id": "staff_female_03",
+      "label": "Nhân viên nữ 3",
+      "role": "staff",
+      "appearance": "Da nâu đậm, tóc tết lệch, tạp dề xanh sage",
+      "url": "/models/avatars/staff_female_03.glb"
+    },
+    {
+      "id": "owner_daughter",
+      "label": "Bé gái con chủ tiệm",
+      "role": "child",
+      "appearance": "Dáng trẻ em, tóc đen dài với băng đô hồng, váy xòe và tay vẫy chào",
+      "url": "/models/avatars/owner_daughter.glb"
+    },
+    {
+      "id": "customer_female",
+      "label": "Khách nữ",
+      "role": "customer",
+      "appearance": "Tóc vàng dài, áo tím nhạt, túi đeo chéo",
+      "url": "/models/avatars/customer_female.glb"
+    },
+    {
+      "id": "customer_male",
+      "label": "Khách nam",
+      "role": "customer",
+      "appearance": "Áo khoác xanh, quần denim, dáng cao",
+      "url": "/models/avatars/customer_male.glb"
+    },
+    {
+      "id": "customer_senior",
+      "label": "Khách lớn tuổi",
+      "role": "customer",
+      "appearance": "Tóc bạc, kính vàng, áo khoác xanh sage",
+      "url": "/models/avatars/customer_senior.glb"
+    }
+  ]
+}

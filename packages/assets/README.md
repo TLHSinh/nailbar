@@ -1,0 +1,9 @@
+# Tài sản đồ họa
+
+Đặt mô hình, texture và âm thanh do tiệm sở hữu hoặc có quyền sử dụng tại đây. Dự kiến: `salon/` (GLB quầy, ghế, bàn, nội thất), `avatars/` (nhân vật và clip hoạt ảnh), `nails/` (bàn tay, dáng, màu, họa tiết), `audio/` (âm thanh). Mỗi tài sản ngoài cần ghi nguồn, tác giả, URL, giấy phép và ngày tải trong manifest trước khi đưa lên website.
+
+Nội thất V3 là asset **tự dựng cho dự án**, dựa trên hai phác thảo ở `docs/`. File nguồn chỉnh sửa được là [`source/nail_furniture_v3.blend`](source/nail_furniture_v3.blend); script tái tạo là [`tools/blender/build_furniture_v3.py`](../../tools/blender/build_furniture_v3.py). Chạy script bằng Blender 5.2 để xuất `manicure_station_v3.glb` và `pedicure_station_v3.glb` vào `apps/web/public/models/`. Trang web nhân bản hai GLB này thành bốn trạm mỗi loại. Cảnh kiến trúc còn lại dựng bằng hình học Three.js; xem [`docs/SALON_V2_MODEL.md`](../../docs/SALON_V2_MODEL.md).
+
+Bản chơi `/` dùng hai GLB dành cho game tại `apps/web/public/models/game/`. Chạy `& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --background --python tools/blender/optimize_furniture_for_game.py` từ thư mục gốc để dựng lại chúng từ file `.blend` V3. Script gộp các mesh tĩnh cùng vật liệu: manicure 73 → 14 nhóm, pedicure 68 → 14 nhóm. `loadFurnitureGameV3` dùng instancing để vẽ bốn vị trí mỗi loại; file `.blend` và GLB trưng bày gốc không bị ghi đè.
+
+Bộ tám nhân vật hiện dùng **V4**: [`source/nail_avatars_v4.blend`](source/nail_avatars_v4.blend), [script dựng](../../tools/blender/build_avatars_v4.py) và [tám texture da UV](textures/avatars_v4/). Script xuất GLB riêng cho từng người cùng `manifest.json` vào `apps/web/public/models/avatars/`; xem [ảnh và báo cáo V4](../../docs/AVATARS_V4.md). Các bản [V1](../../docs/AVATARS_V1.md), [V2](../../docs/AVATARS_V2.md) và [V3](../../docs/AVATARS_V3.md) được giữ để so sánh. File Blender mẫu ở Desktop đã được kiểm tra cấu trúc nhưng không đóng gói vào sản phẩm.

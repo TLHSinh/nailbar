@@ -1,0 +1,8 @@
+{
+  "name": "@nail-online/server",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "tsx watch src/index.ts", "start": "tsx src/index.ts", "check": "tsc --noEmit", "test": "tsx --test src/rooms/SalonRoom.test.ts" },
+  "dependencies": { "@nail-online/shared": "*", "express": "^5.1.0", "socket.io": "^4.8.1", "zod": "^4.6.7" },
+  "devDependencies": { "@types/express": "^5.0.0", "@types/node": "^24.0.0", "tsx": "^4.20.0" }
+}
